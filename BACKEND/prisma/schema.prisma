@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  email     String   @unique
+  senha     String
+  createdAt DateTime @default(now())
+}
+
+model Familia {
+  id         Int          @id @default(autoincrement())
+  nome       String
+  senha      String
+  confirmou  Boolean      @default(false)
+  createdAt  DateTime     @default(now())
+
+  convidados Convidado[]
+}
+
+model Convidado {
+  id            Int       @id @default(autoincrement())
+  nome          String
+
+  // null = ainda não respondeu
+  // true = vai participar
+  // false = não vai participar
+  confirmado    Boolean?
+
+  respondidoEm  DateTime?
+
+  familiaId     Int
+  familia       Familia   @relation(fields: [familiaId], references: [id], onDelete: Cascade)
+}
+
+model Presente {
+  id          Int      @id @default(autoincrement())
+  nome        String
+ 
+  tamanho     String?
+  imagem      String
+  linkLoja    String
+  reservado   Boolean  @default(false)
+  reservador  String?
+  createdAt   DateTime @default(now())
+
+}
+
+model Mensagem {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  texto       String
+  createdAt   DateTime @default(now())
+}
+
+model Foto {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  imagem      String
+  createdAt   DateTime @default(now())
+}
