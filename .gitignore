@@ -1,0 +1,21 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+**/.env
+
+# Logs
+**/*.log
+
+# Dependências
+**/node_modules
+
+# Build
+**/dist
+
+# Uploads temporários
+BACKEND/uploads
+
+# Prisma Studio
+.prisma
