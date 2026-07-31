@@ -38,15 +38,21 @@ export default function ModalPresente({
 
   
 
+useEffect(() => {
 
-  useEffect(() => {
-    if (presente);
+  if (presente) {
 
-    setFormulario(presente ?? formularioInicial);
-  }, [aberto, presente]);
+    setFormulario(presente);
 
-  if (!aberto) return null;
+  } else {
 
+    setFormulario(formularioInicial);
+
+  }
+
+  setArquivoImagem(null);
+
+}, [presente, aberto]);
  
 
 async function salvar() {

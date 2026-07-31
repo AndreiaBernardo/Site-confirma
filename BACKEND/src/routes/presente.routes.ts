@@ -1,25 +1,19 @@
 import { Router } from "express";
 import { PresenteController } from "../controllers/presente.controller.js";
+
 import multer from "multer";
-import path from "path";
 
 const router = Router();
 
 const controller = new PresenteController();
 
-const storage = multer.diskStorage({
-  destination(req, file, callback) {
-    callback(null, path.resolve("uploads/presentes"));
-  },
 
-  filename(req, file, callback) {
-    callback(null, Date.now() + "-" + file.originalname);
-  },
-});
 
-const upload = multer({
-  storage,
-});
+
+const upload =  multer({
+  storage : multer.memoryStorage()
+})
+
 
 router.get("/", (req, res) => controller.listar(req, res));
 

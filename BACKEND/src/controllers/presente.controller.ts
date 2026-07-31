@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { PresenteService } from "../services/presente.services.js";
 import { tratarErro } from "../utils/tratarErro.js";
-import fs from "fs";
-import { uploadImagem } from "../utils/uploadCloudinary.js";
+
+import { uploadImagemBuffer } from "../utils/uploadCloudinary.js";
 
 export class PresenteController {
 
@@ -54,19 +54,16 @@ export class PresenteController {
 
 
 
-      let imagem = "";
+     let imagem = "";
 
 if (req.file) {
 
-  imagem = await uploadImagem(
-    req.file.path,
-    "presentes"
-  );
-
-  fs.unlinkSync(req.file.path);
+    imagem = await uploadImagemBuffer(
+        req.file.buffer,
+        "presentes"
+    );
 
 }
-
      
 
 
@@ -103,19 +100,14 @@ if (req.file) {
         reservador
       } = req.body;
 
-     let imagem = req.body.imagem;
+    let imagem = req.body.imagem ?? "";
 
 if (req.file) {
 
-
-  imagem = await uploadImagem(
-    req.file.path,
-    "presentes"
-    
-  );
-
-  console.log("URL:", imagem);
-  fs.unlinkSync(req.file.path);
+    imagem = await uploadImagemBuffer(
+        req.file.buffer,
+        "presentes"
+    );
 
 }
       

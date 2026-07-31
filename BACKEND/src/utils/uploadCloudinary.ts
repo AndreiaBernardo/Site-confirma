@@ -1,33 +1,33 @@
-import { cloudinary } from "../config/cloudinary.js";
+import { v2 as cloudinary } from "cloudinary";
+import streamifier from "streamifier";
 
-export async function uploadImagem(
-  caminhoArquivo: string,
+export async function uploadImagemBuffer(
+  buffer: Buffer,
   pasta: string
-) {
+): Promise<string> {
 
-  try {
+  return new Promise((resolve, reject) => {
 
-    console.log("Arquivo recebido:", caminhoArquivo);
+    const stream = cloudinary.uploader.upload_stream(
 
-    const resultado = await cloudinary.uploader.upload(
-      caminhoArquivo,
       {
         folder: pasta,
+      },
+
+      (error, result) => {
+
+        if (error) {
+          return reject(error);
+        }
+
+        resolve(result!.secure_url);
+
       }
+
     );
 
-   
+    streamifier.createReadStream(buffer).pipe(stream);
 
-    return resultado.secure_url;
-
-  } catch (error) {
-
-    console.error("ERRO CLOUDINARY");
-
-    console.error(error);
-
-    throw error;
-
-  }
+  });
 
 }
