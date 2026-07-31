@@ -57,20 +57,29 @@ useEffect(() => {
 
 async function salvar() {
 
-  await onSalvar({
+  try {
 
-    ...formulario,
+    await onSalvar({
 
-    id: presente?.id ?? 0,
+      ...formulario,
 
-    arquivoImagem,
+      id: presente?.id ?? 0,
 
-  } );
+      arquivoImagem,
 
-  onClose();
+    });
+
+    onClose();
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Erro ao salvar presente.");
+
+  }
 
 }
-
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl p-8">
@@ -157,7 +166,7 @@ async function salvar() {
               setFormulario({ ...formulario, linkLoja: e.target.value })
             }
           />
-        </div>
+        
       </div>
       <div className="flex justify-end gap-4 mt-10">
         <button
@@ -177,6 +186,7 @@ async function salvar() {
   : "Salvar Presente"}
         </button>
       </div>
+    </div>
     </div>
   );
 }
