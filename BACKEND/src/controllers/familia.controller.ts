@@ -62,23 +62,39 @@ export class FamiliaController {
   
 
   async atualizar(req: Request, res: Response) {
-    try {
-      const id = Number(req.params.id);
-      const { nome, senha, convidado } = req.body;
 
-      const familia = await this.service.atualizar(
-        id,
-        nome,
-        senha,
-        convidado
-      );
+  console.log("Entrou no atualizar");
 
-      return res.json(familia);
-    } catch (error) {
-      return tratarErro(res, error)
-      };
-    }
-  
+  console.log(req.body);
+
+  try {
+
+    const id = Number(req.params.id);
+
+    const {
+      nome,
+      senha,
+      convidados,
+    } = req.body;
+
+    const familia = await this.service.atualizar(
+      id,
+      nome,
+      senha,
+      convidados
+    );
+
+    return res.json(familia);
+
+  } catch (error) {
+
+  console.error("ERRO AO ATUALIZAR FAMÍLIA:");
+
+  console.error(error);
+
+  return tratarErro(res, error);
+
+}}
 
     async salvarConfirmacao(req: Request, res: Response) {
   try {
