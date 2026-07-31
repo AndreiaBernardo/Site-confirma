@@ -13,8 +13,6 @@ interface ModalPresenteProps {
   presente?: Presente;
 }
 
-
-
 export default function ModalPresente({
   aberto,
   onClose,
@@ -33,53 +31,41 @@ export default function ModalPresente({
 
   const [formulario, setFormulario] = useState(formularioInicial);
 
-  const [arquivoImagem, setArquivoImagem] =
-  useState<File | null>(null);
+  const [arquivoImagem, setArquivoImagem] = useState<File | null>(null);
 
-  
+  useEffect(() => {
+    if (presente) {
+      setFormulario(presente);
+    } else {
+      setFormulario(formularioInicial);
+    }
 
-useEffect(() => {
+    setArquivoImagem(null);
+  }, [presente, aberto]);
+  if (!aberto) return null;
 
-  if (presente) {
 
-    setFormulario(presente);
+  async function salvar() {
+    console.log("clicou em salvar");
 
-  } else {
+    try {
+      await onSalvar({
+        ...formulario,
 
-    setFormulario(formularioInicial);
+        id: presente?.id ?? 0,
 
+        arquivoImagem,
+      });
+
+      console.log("salvou");
+
+      onClose();
+    } catch (error) {
+      console.error(error);
+
+      alert("Erro ao salvar presente.");
+    }
   }
-
-  setArquivoImagem(null);
-
-}, [presente, aberto]);
- 
-
-async function salvar() {
-
-  try {
-
-    await onSalvar({
-
-      ...formulario,
-
-      id: presente?.id ?? 0,
-
-      arquivoImagem,
-
-    });
-
-    onClose();
-
-  } catch (error) {
-
-    console.error(error);
-
-    alert("Erro ao salvar presente.");
-
-  }
-
-}
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl p-8">
@@ -88,9 +74,14 @@ async function salvar() {
             {presente ? "Editar Presente" : "Novo Presente"}
           </h2>
 
-          <button onClick={onClose}>
-            <X size={28} />
-          </button>
+          <button
+  onClick={() => {
+    alert("clicou");
+    onClose();
+  }}
+>
+  <X size={28} />
+</button>
         </div>
 
         <div className="space-y-5">
@@ -124,28 +115,23 @@ async function salvar() {
         <div>
           <label className="block mb-2 font-medium">URL da imagem</label>
 
-         <input
-  type="file"
-  accept="image/*"
-  onChange={(e) => {
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              const arquivo = e.target.files?.[0];
 
-    const arquivo =
-      e.target.files?.[0];
+              if (!arquivo) return;
 
-    if (!arquivo) return;
+              setArquivoImagem(arquivo);
 
-    setArquivoImagem(arquivo);
+              setFormulario({
+                ...formulario,
 
-    setFormulario({
-
-      ...formulario,
-
-      imagem: URL.createObjectURL(arquivo),
-
-    });
-
-  }}
-/>
+                imagem: URL.createObjectURL(arquivo),
+              });
+            }}
+          />
 
           {formulario.imagem && (
             <img
@@ -166,27 +152,31 @@ async function salvar() {
               setFormulario({ ...formulario, linkLoja: e.target.value })
             }
           />
-        
-      </div>
-      <div className="flex justify-end gap-4 mt-10">
-        <button
-          className="px-6 py-2 border rounded-xl hover:bg-zinc-100"
-          onClick={onClose}
-        >
-          Cancelar
-        </button>
+        </div>
+        <div className="flex justify-end gap-4 mt-10">
+          <button
+  type="button"
+  className="px-6 py-2 border rounded-xl"
+  onClick={() => {
+    console.log("CANCELAR");
+    onClose();
+  }}
+>
+  Cancelar
+</button>
 
-        <button
-          
-          className="botao-confirma"
-          onClick={salvar}
-        >
-          {presente
-  ? "Salvar Alterações"
-  : "Salvar Presente"}
-        </button>
+          <button
+  type="button"
+  className="bg-violet-700 text-white px-6 py-3 rounded-xl"
+  onClick={() => {
+    console.log("BOTÃO FUNCIONOU");
+    salvar();
+  }}
+>
+  {presente ? "Salvar Alterações" : "Salvar Presente"}
+</button>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

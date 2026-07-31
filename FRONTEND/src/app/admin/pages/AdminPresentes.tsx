@@ -127,6 +127,8 @@ async function confirmarExclusao() {
 
 }
 
+console.log("modalAberto:", modalAberto);
+
   return (
     <section className="space-y-6 sm:space-y-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
