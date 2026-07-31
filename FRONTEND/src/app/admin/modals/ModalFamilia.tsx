@@ -170,7 +170,7 @@ onSalvar(familiaSalva);
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
 
-      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl p-8">
+      <div className="bg-white rounded-3xl shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
 
         <div className="flex items-center justify-between mb-8">
 
@@ -186,9 +186,9 @@ onSalvar(familiaSalva);
 
         </div>
 
-        <form className="flex flex-col h-full" onSubmit={salvarFamilia}>
+        <form className="space-y-4 p-8" onSubmit={salvarFamilia}>
 
-          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
+          <div>
 
             <label>Nome da Família</label>
 
@@ -204,7 +204,7 @@ onSalvar(familiaSalva);
 
           </div>
 
-          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
+          <div>
 
             <label>Senha</label>
 
@@ -221,7 +221,7 @@ onSalvar(familiaSalva);
 
           </div>
 
-          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
+          <div>
 
             <label>Quantidade de convidados</label>
 
@@ -236,8 +236,8 @@ onSalvar(familiaSalva);
                 <p className="text-red-500 text-sm mt-1">{erroConvidados}</p>
             )}
 
-          </div >
-          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
+          </div>
+          <div className="space-y-4">
 
   <h3 className="text-xl font-semibold">
     Convidados
@@ -245,7 +245,7 @@ onSalvar(familiaSalva);
 
   {convidados.map((nome, index) => (
 
-    <div key={index}  className="flex-1 overflow-y-auto p-8 space-y-6">
+    <div key={index}>
 
       <label>
         Convidado {index + 1}
@@ -265,18 +265,14 @@ onSalvar(familiaSalva);
 
 </div>
 
-          <div className="border-t p-6 flex justify-end">
-
-  <button
-    type="submit"
-    className="botao-confirma"
-  >
-    {editando
-      ? "Salvar Alterações"
-      : "Salvar Família"}
-  </button>
-
-</div>
+          <button
+            type="submit"
+            className="botao-confirma"
+          >
+            {editando 
+            ? "Salvar Alterações"
+            : "Salvar Família"}
+          </button>
 
         </form>
 
