@@ -14,4 +14,5 @@ router.patch(
   controller.redefinirSenha(req, res)
 );
 
+
 export default router;
