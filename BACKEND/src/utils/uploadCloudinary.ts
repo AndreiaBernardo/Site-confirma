@@ -1,5 +1,21 @@
-import { v2 as cloudinary } from "cloudinary";
+import { cloudinary } from "../config/cloudinary.js";
 import streamifier from "streamifier";
+
+
+export async function uploadImagem(
+  caminhoArquivo: string,
+  pasta: string
+) {
+  const resultado = await cloudinary.uploader.upload(
+    caminhoArquivo,
+    {
+      folder: pasta,
+    }
+  );
+
+  return resultado.secure_url;
+}
+
 
 export async function uploadImagemBuffer(
   buffer: Buffer,
@@ -8,12 +24,10 @@ export async function uploadImagemBuffer(
 
   return new Promise((resolve, reject) => {
 
-    const stream = cloudinary.uploader.upload_stream(
-
+    const uploadStream = cloudinary.uploader.upload_stream(
       {
         folder: pasta,
       },
-
       (error, result) => {
 
         if (error) {
@@ -23,10 +37,11 @@ export async function uploadImagemBuffer(
         resolve(result!.secure_url);
 
       }
-
     );
 
-    streamifier.createReadStream(buffer).pipe(stream);
+    streamifier
+      .createReadStream(buffer)
+      .pipe(uploadStream);
 
   });
 
