@@ -25,6 +25,8 @@ export default function LinhaFamilia({
     <tr className="border-b hover:bg-violet-50 transition">
       <td className="p-5 font-medium">Família {familia.nome}</td>
 
+      <td className="text-center">{familia.senha}</td>
+
       <td className="text-center">{quantidadeConvidados}</td>
 
       <td className="text-center">{quantidadeConfirmados}</td>

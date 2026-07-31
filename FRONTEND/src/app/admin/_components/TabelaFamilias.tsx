@@ -36,8 +36,12 @@ if (familias.length === 0) {
 
           <tr>
 
-            <th className="text-left p-5">
+            <th className="text-left p-5 ">
               Família
+            </th>
+
+            <th className="text-center p-3">
+              Senha
             </th>
 
             <th className="text-center">
@@ -48,7 +52,7 @@ if (familias.length === 0) {
               Confirmados
             </th>
 
-            <th className="text-center p-5">
+            <th className="text-center ">
               Ações
             </th>
 
