@@ -186,9 +186,9 @@ onSalvar(familiaSalva);
 
         </div>
 
-        <form className="space-y-6" onSubmit={salvarFamilia}>
+        <form className="flex flex-col h-full" onSubmit={salvarFamilia}>
 
-          <div>
+          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
 
             <label>Nome da Família</label>
 
@@ -204,7 +204,7 @@ onSalvar(familiaSalva);
 
           </div>
 
-          <div>
+          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
 
             <label>Senha</label>
 
@@ -221,7 +221,7 @@ onSalvar(familiaSalva);
 
           </div>
 
-          <div>
+          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
 
             <label>Quantidade de convidados</label>
 
@@ -236,8 +236,8 @@ onSalvar(familiaSalva);
                 <p className="text-red-500 text-sm mt-1">{erroConvidados}</p>
             )}
 
-          </div>
-          <div className="space-y-4">
+          </div >
+          <div  className="flex-1 overflow-y-auto p-8 space-y-6">
 
   <h3 className="text-xl font-semibold">
     Convidados
@@ -245,7 +245,7 @@ onSalvar(familiaSalva);
 
   {convidados.map((nome, index) => (
 
-    <div key={index}>
+    <div key={index}  className="flex-1 overflow-y-auto p-8 space-y-6">
 
       <label>
         Convidado {index + 1}
@@ -265,14 +265,18 @@ onSalvar(familiaSalva);
 
 </div>
 
-          <button
-            type="submit"
-            className="botao-confirma"
-          >
-            {editando 
-            ? "Salvar Alterações"
-            : "Salvar Família"}
-          </button>
+          <div className="border-t p-6 flex justify-end">
+
+  <button
+    type="submit"
+    className="botao-confirma"
+  >
+    {editando
+      ? "Salvar Alterações"
+      : "Salvar Família"}
+  </button>
+
+</div>
 
         </form>
 
