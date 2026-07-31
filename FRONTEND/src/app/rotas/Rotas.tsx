@@ -12,6 +12,7 @@ import AdminPresentes from "../admin/pages/AdminPresentes";
 import AdminGaleria from "../admin/pages/AdminGaleria";
 import LayoutAdmin from "../admin/_components/LayoutAdmin";
 import EsqueciMinhaSenha from "../admin/pages/EsqueciMinhaSenha";
+import AdminCadastro from "../admin/pages/AdminCadastro";
 
 export default function Rotas() {
   return (
@@ -21,6 +22,11 @@ export default function Rotas() {
       <Route path="/confirmacao-presenca" element={<ConfirmacaoPresenca />} />
       <Route path="/confirmacao-final" element={<ConfirmacaoFinal />} />
       <Route path="/presentes" element={<Presentes />} />
+
+      <Route
+  path="/admin/cadastro"
+  element={<AdminCadastro />}
+/>
       <Route path="/admin" element={<AdminLogin />} />
 
       <Route

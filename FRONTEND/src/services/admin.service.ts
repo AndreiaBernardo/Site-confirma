@@ -6,6 +6,40 @@ export interface Admin {
   email: string;
 }
 
+export async function cadastrarAdmin(
+  nome: string,
+  email: string,
+  senha: string
+) {
+
+  const response = await fetch(
+    `${API}/admins`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        senha,
+      }),
+    }
+  );
+
+  const dados = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      dados.erro ??
+      "Erro ao cadastrar administrador."
+    );
+  }
+
+  return dados;
+
+}
+
 export async function loginAdmin(
   email: string,
   senha: string
