@@ -70,7 +70,7 @@ async function confirmarReserva(nome: string) {
         <p className="mt-4 sm:mt-6 texto-padrao cor-texto text-sm sm:text-base lg:text-lg px-2">
           Sua presença já é o nosso maior presente.
           <br />
-          Deseja presentear a debutante, segue algumas sugestões abaixo.
+          Caso deseje presentear a debutante, segue algumas sugestões abaixo.
         </p>
 
         <br />
