@@ -42,7 +42,7 @@ export async function editarFamilia(
   }
 ) {
   const response = await fetch(
-    (`${API}/familias`),
+    (`${API}/familias/${id}`),
     {
       method: "PUT",
       headers: {
@@ -130,7 +130,7 @@ export async function loginFamilia(
   senha: string
 ) {
   const response = await fetch(
-    (`$(API}/familias/login)`),
+    `${API}/familias/login`,
     {
       method: "POST",
       headers: {
