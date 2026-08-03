@@ -149,16 +149,6 @@ const familiaSalva: Familia = {
 
 onSalvar(familiaSalva);
 
-    setNomeFamilia("");
-    setSenha("");
-    setQuantidade(1);
-    setConvidados([""]);
-    setErroNome("");
-    setErroSenha("");
-    setErroConvidados("");
-
-
-    onClose();
 }
 
 

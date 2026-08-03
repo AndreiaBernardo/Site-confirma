@@ -18,7 +18,7 @@ export async function criarFamilia(familia: {
   senha: string;
   convidados: string[];
 }) {
-  const response = await fetch("http://localhost:3333/familias", {
+  const response = await fetch(`${API}/familias`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
