@@ -90,7 +90,8 @@ export async function editarPresenteAPI(
     nome: string;
     tamanho?: string;
     linkLoja: string;
-    
+     reservado: boolean;
+    reservador: string | null;
 
     arquivoImagem?: File | null;
   }
