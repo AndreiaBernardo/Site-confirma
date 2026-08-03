@@ -70,7 +70,7 @@ useEffect(() => {
           <img
   src={fotos[imagemAtual]?.imagem}
   alt={fotos[imagemAtual]?.titulo}
-  className="block w-full h-40 sm:h-80 lg:h-96 xl:h-[700px] object-cover rounded-2xl sm:rounded-3xl shadow-xl"
+  className="block w-150 justify-centeri  itens-center mx-auto sm:h-80 lg:h-96 xl:h-[600px] object-cover rounded-2xl sm:rounded-3xl shadow-xl"
 />
           <div className="absolute inset-0 flex items-center justify-center">
             <button
