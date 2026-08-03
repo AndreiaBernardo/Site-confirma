@@ -27,7 +27,9 @@ const [senha, setSenha] = useState("");
 
     navigate("/confirmacao-presenca");
 
-  } catch (error) {
+  } catch {
+
+    console.error(Error);
 
     alert("Nome ou senha inválidos.");
 
