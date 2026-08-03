@@ -27,7 +27,7 @@ export default function LinhaMensagem({
       </td>
 
       <td className="text-center">
-        {mensagem.data}
+        {mensagem.createdAt}
       </td>
 
       <td>

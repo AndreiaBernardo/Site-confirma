@@ -53,7 +53,7 @@ export default function ModalMensagem({
             </h3>
 
             <p>
-              {mensagem?.data}
+              {mensagem?.createdAt}
             </p>
 
           </div>

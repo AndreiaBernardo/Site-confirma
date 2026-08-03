@@ -2,7 +2,7 @@ export interface Mensagem {
   id: number;
   nome: string;
   texto: string;
-  createAt?: string;
+  createdAt?: string;
   sucesso?: boolean;
   erro?: string;
 }
