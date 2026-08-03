@@ -34,30 +34,45 @@ export class PresenteRepository {
     });
   }
 
-  async atualizar(
-    id: number,
-    nome: string,
-    tamanho: string,
-    imagem: string,
-    linkLoja: string,
-    reservado: boolean,
-    reservador: string | null
-  ) {
-    return prisma.presente.update({
-      where: {
-        id,
-      },
+ async atualizar(
+  id: number,
+  nome: string,
+  tamanho: string,
+  imagem: string,
+  linkLoja: string,
+  reservado: boolean,
+  reservador: string | null
+) {
 
-      data: {
-        nome,
-        tamanho,
-        imagem,
-        linkLoja,
-        reservado,
-        reservador,
-      },
-    });
-  }
+console.log("Repository atualizar:");
+
+console.log({
+  id,
+  nome,
+  tamanho,
+  imagem,
+  linkLoja,
+});
+
+ const atualizado = await prisma.presente.update({
+  where: { id },
+  data: {
+    nome,
+    tamanho,
+    imagem,
+    linkLoja,
+    reservado,
+    reservador,
+  },
+});
+
+console.log("Salvou no banco:", atualizado);
+
+return atualizado;
+
+}
+
+
 
   async reservarPresente(
   id: number,

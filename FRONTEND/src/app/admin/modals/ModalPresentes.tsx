@@ -35,18 +35,19 @@ export default function ModalPresente({
 
   useEffect(() => {
     if (presente) {
-      setFormulario(presente);
+      setFormulario({ ...presente });
     } else {
       setFormulario(formularioInicial);
     }
 
     setArquivoImagem(null);
   }, [presente, aberto]);
+  
   if (!aberto) return null;
 
 
   async function salvar() {
-    console.log("clicou em salvar");
+    
 
     try {
       await onSalvar({
@@ -57,7 +58,7 @@ export default function ModalPresente({
         arquivoImagem,
       });
 
-      console.log("salvou");
+     
 
       onClose();
     } catch (error) {
@@ -76,7 +77,7 @@ export default function ModalPresente({
 
           <button
   onClick={() => {
-    alert("clicou");
+    
     onClose();
   }}
 >
@@ -158,7 +159,7 @@ export default function ModalPresente({
   type="button"
   className="px-6 py-2 border rounded-xl"
   onClick={() => {
-    console.log("CANCELAR");
+    
     onClose();
   }}
 >
@@ -169,7 +170,7 @@ export default function ModalPresente({
   type="button"
   className="bg-violet-700 text-white px-6 py-3 rounded-xl"
   onClick={() => {
-    console.log("BOTÃO FUNCIONOU");
+    
     salvar();
   }}
 >

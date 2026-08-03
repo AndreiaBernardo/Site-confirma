@@ -56,7 +56,10 @@ export class PresenteService {
       throw new Error("Nome obrigatório.");
     }
 
-    
+    console.log("Service recebeu:", {
+  nome,
+  imagem,
+});
 
     return this.repository.atualizar(
       id,

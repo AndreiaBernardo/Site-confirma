@@ -20,12 +20,17 @@ export default function LinhaPresente({
 
         <div className="flex items-center gap-4">
 
-          <img
-            src={presente.imagem}
-            alt={presente.nome}
-            className="w-16 h-16 rounded-xl object-cover"
-          />
-
+          {presente.imagem ? (
+    <img
+        src={presente.imagem}
+        alt={presente.nome}
+        className="w-16 h-16 rounded-xl object-cover"
+    />
+) : (
+    <div className="w-16 h-16 rounded-xl bg-zinc-200 flex items-center justify-center text-xs">
+        Sem foto
+    </div>
+)}
           <span className="font-medium">
             {presente.nome}
           </span>

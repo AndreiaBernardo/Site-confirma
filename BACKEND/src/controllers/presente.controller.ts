@@ -3,7 +3,7 @@ import { PresenteService } from "../services/presente.services.js";
 import { tratarErro } from "../utils/tratarErro.js";
 
 import { uploadImagemBuffer } from "../utils/uploadCloudinary.js";
-
+console.log("PRESENTE CONTROLLER CARREGADO");
 export class PresenteController {
 
   private service = new PresenteService();
@@ -65,7 +65,7 @@ if (req.file) {
 
 }
      
-
+console.log("Imagem recebida da Cloudinary:", imagem);
 
       const presente = await this.service.criar(
         nome,
@@ -83,35 +83,47 @@ if (req.file) {
 
     }
   
+    
 
-  async atualizar(req: Request, res: Response) {
+  async atualizar(req: Request, res: Response) 
+  
+  
+  {
+
+     console.log("CHEGOU NO UPDATE");
+  console.log(req.body);
+  console.log(req.file);
     try {
 
       const { id } = req.params;
+      console.log("===== UPDATE PRESENTE =====");
+console.log("BODY:", req.body);
+console.log("FILE:", req.file);
 
-      
 
       const {
         nome,
         tamanho,
-      
         linkLoja,
-        reservado,
         reservador
       } = req.body;
 
-    let imagem = req.body.imagem ?? "";
+      const reservado =
+  req.body.reservado === "true";
+  
+    const presenteAtual =
+  await this.service.buscarPorId(Number(id));
+console.log("PRESENTE ATUAL:", presenteAtual);
+let imagem = presenteAtual.imagem;
 
 if (req.file) {
-
-    imagem = await uploadImagemBuffer(
-        req.file.buffer,
-        "presentes"
-    );
-
+  imagem = await uploadImagemBuffer(
+    req.file.buffer,
+    "presentes"
+  );
 }
       
-
+console.log("Imagem antes de atualizar:", imagem);
 
       const presente = await this.service.atualizar(
         Number(id),

@@ -1,6 +1,6 @@
 import CardPresente from "../_components/CardPresente";
 
-import { atualizarPresente, listarPresentes } from "../../../services/presente.sevice";
+import { listarPresentes, reservarPresenteAPI } from "../../../services/presente.sevice";
 import { useState, useEffect } from "react";
 
 import type { Presente } from "../../shared/types/Presente";
@@ -41,11 +41,7 @@ async function confirmarReserva(nome: string) {
 
   try {
 
-    await atualizarPresente({
-      ...presenteSelecionado,
-      reservado: true,
-      reservador: nome,
-    });
+    await reservarPresenteAPI(presenteSelecionado.id, nome);
 
     await carregarPresentes();
 

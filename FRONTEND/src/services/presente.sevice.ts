@@ -90,8 +90,8 @@ export async function editarPresenteAPI(
     nome: string;
     tamanho?: string;
     linkLoja: string;
-    reservado: boolean;
-    reservador?: string | null;
+    
+
     arquivoImagem?: File | null;
   }
 ) {
@@ -110,15 +110,6 @@ export async function editarPresenteAPI(
     dados.linkLoja
   );
 
-  formData.append(
-    "reservado",
-    String(dados.reservado)
-  );
-
-  formData.append(
-    "reservador",
-    dados.reservador ?? ""
-  );
 
   if (dados.arquivoImagem) {
 
@@ -138,15 +129,42 @@ export async function editarPresenteAPI(
   );
 
   if (!response.ok) {
-
-    throw new Error(
-      "Erro ao editar presente."
-    );
+    
+    throw new Error("Erro ao editar presente.");
+    
 
   }
 
-  return response.json();
+  const json = await response.json();
 
+console.log(json);
+
+  return json;
+
+}
+
+export async function reservarPresenteAPI(
+  id: number,
+  reservador: string
+) {
+  const response = await fetch(
+    `${API}/presentes/${id}/reservar`,
+    {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        reservador,
+      }),
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Erro ao reservar presente.");
+  }
+
+  return response.json();
 }
 
 export async function excluirPresenteAPI(id: number) {
