@@ -22,9 +22,14 @@ export default function TabelaPresentes({
   }
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+    <>
+     <p className="md:hidden text-center text-sm text-gray-500 mb-3">
+        👈 Deslize para visualizar todas as colunas
+      </p>
 
-      <table className="w-full">
+    <div className="bg-white rounded-3xl shadow-lg overflow-x-auto">
+
+      <table className="w-full min-w-[900px]">
 
         <thead className="bg-violet-700 text-white">
 
@@ -66,5 +71,6 @@ export default function TabelaPresentes({
       </table>
 
     </div>
+    </>
   );
 }
