@@ -16,8 +16,9 @@ const [senha, setSenha] = useState("");
   try {
 
     const familia = await loginFamilia(
-      nome,
-      senha
+      nome.trim(),
+      senha.trim()
+    
     );
 
     localStorage.setItem(
