@@ -3,18 +3,30 @@ import { prisma } from "../config/prisma.js";
 
 export class FamiliaRepository {
 
-  async login(nome: string, senha: string) {
-  return prisma.familia.findFirst({
+ async login(nome: string, senha: string) {
+
+  const familia = await prisma.familia.findFirst({
     where: {
-      nome,
-      senha,
+      nome: {
+        equals: nome,
+        mode: "insensitive",
+      },
     },
     include: {
       convidados: true,
     },
   });
-}
 
+  if (!familia) {
+    return null;
+  }
+
+  if (familia.senha.trim() !== senha.trim()) {
+    return null;
+  }
+
+  return familia;
+}
   async listar() {
 
     return prisma.familia.findMany({

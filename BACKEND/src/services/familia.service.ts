@@ -4,6 +4,9 @@ export class FamiliaService {
   private repository = new FamiliaRepository();
 
   async login(nome: string, senha: string) {
+    nome = nome.trim();
+    senha = senha.trim();
+
 
   if (!nome.trim()) {
     throw new Error("Informe o nome da família.");
