@@ -16,9 +16,8 @@ const [senha, setSenha] = useState("");
   try {
 
     const familia = await loginFamilia(
-      nome.trim(),
-      senha.trim()
-    
+      nome,
+      senha
     );
 
     localStorage.setItem(
@@ -28,9 +27,9 @@ const [senha, setSenha] = useState("");
 
     navigate("/confirmacao-presenca");
 
-  } catch {
+  } catch (error) {
 
-    console.error(Error);
+    console.error(error);
 
     alert("Nome ou senha inválidos.");
 
