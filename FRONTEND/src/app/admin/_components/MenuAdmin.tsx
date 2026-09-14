@@ -36,7 +36,7 @@ export default function MenuAdmin() {
         <div className="p-8 border-b border-red-900 flex flex-col">
           <div className="flex items-center gap-3">
             <Sparkles size={30} />
-            <h1 className="text-2xl font-bold">Yasmim</h1>
+            <h1 className="text-2xl font-bold">Gabriela</h1>
           </div>
 
           <div className="flex items-center gap-2 mt-4">
