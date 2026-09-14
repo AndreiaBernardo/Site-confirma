@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function ContadorRegressivo() {
-  const dataEvento = new Date("2026-09-05T19:00:00");
+  const dataEvento = new Date("2026-10-17T20:00:00");
 
   const [tempo, setTempo] = useState({
     dias: 0,
