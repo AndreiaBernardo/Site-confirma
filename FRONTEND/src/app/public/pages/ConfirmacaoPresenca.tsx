@@ -120,7 +120,7 @@ Confirmação da Família {familia?.nome}
               <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 <UserRound
                   size={36}
-                  className="text-violet-700 flex-shrink-0"
+                  className="text-red-700 flex-shrink-0"
                 />
 
                 <div className="min-w-0">
@@ -132,7 +132,7 @@ Confirmação da Família {familia?.nome}
               </div>
 
               <div className="flex flex-col gap-2 sm:gap-3 w-full sm:w-auto">
-                <label className="flex items-center gap-2 cursor-pointer hover:text-violet-700 transition-colors">
+                <label className="flex items-center gap-2 cursor-pointer hover:text-red-700 transition-colors">
                   <input
                     type="radio"
                     name={`convidado-${convidado.id}`}
@@ -143,7 +143,7 @@ Confirmação da Família {familia?.nome}
                   <span className="text-sm sm:text-base">Irá participar</span>
                 </label>
 
-                <label className="flex items-center gap-2 cursor-pointer hover:text-violet-700 transition-colors">
+                <label className="flex items-center gap-2 cursor-pointer hover:text-red-700 transition-colors">
                   <input
                     type="radio"
                     name={`convidado-${convidado.id}`}

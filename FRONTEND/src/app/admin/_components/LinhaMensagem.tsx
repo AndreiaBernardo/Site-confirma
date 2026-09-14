@@ -14,7 +14,7 @@ export default function LinhaMensagem({
 }: LinhaMensagemProps) {
 
   return (
-    <tr className="border-b hover:bg-violet-50 transition">
+    <tr className="border-b hover:bg-red-50 transition">
 
       <td className="p-5 font-medium">
         {mensagem.nome}

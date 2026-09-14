@@ -22,7 +22,7 @@ export default function LinhaFamilia({
   ).length;
 
   return (
-    <tr className="border-b hover:bg-violet-50 transition">
+    <tr className="border-b hover:bg-red-50 transition">
       <td className="p-5 font-medium">Família {familia.nome}</td>
 
       <td className="text-center">{familia.senha}</td>
