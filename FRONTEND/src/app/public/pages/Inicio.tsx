@@ -38,7 +38,7 @@ setMensagemSucesso("");
     });
 
     setMensagemSucesso(
-  "💜 Sua mensagem foi enviada com sucesso! Obrigado pelo carinho com a Yasmim."
+  "💖 Sua mensagem foi enviada com sucesso! Obrigado pelo carinho com a Gabriela."
 );
 
 setNome("");
@@ -73,9 +73,9 @@ setTimeout(() => {
     <>
       <section className="text-center py-12">
         <h1 className="titulo-principal tracking-[0.6rem] text-9xl font-bold">
-          Yasmim
+          Gabriela
         </h1>
-        <h2 className="text-7xl tracking-[0.4rem] text-zinc-600 font-semibold mt-25 font-[--fonte-titulo] ">
+        <h2 className="text-7xl tracking-[0.4rem] text-blue-950 font-semibold mt-25 font-[--fonte-titulo] ">
           15 anos
         </h2>
       </section>
@@ -86,7 +86,7 @@ setTimeout(() => {
 
       <section className=" secao ">
         <div className=" container">
-          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-lg p-10 mt-[-80px]  font-[--fonte-titulo] text-zinc-700 font-medium">
+          <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-lg p-10 mt-[-80px]  font-[--fonte-titulo] text-blue-950 font-medium">
             <h2 className="text-center mb-4 text-2xl ">
               Uma mensagem especial
             </h2>
@@ -99,7 +99,7 @@ setTimeout(() => {
             </p>
             <br />
             <p className="text-2xl text-end  ">
-              <b>Yasmim💜</b>
+              <b>Gabriela💖</b>
             </p>
           </div>
         </div>
@@ -117,7 +117,7 @@ setTimeout(() => {
 
       <section className="secao  font-[--fonte-titulo]  ">
         <div className="container w-[90%] max-w-6xl mx-auto ">
-          <h2 className="text-5xl text-center font-semibold mb-20 mt-10 text-zinc-700">
+          <h2 className="text-5xl text-center font-extrabold mb-20 mt-10 text-blue-950">
             Informações da Festa
           </h2>
           <div
@@ -130,41 +130,41 @@ setTimeout(() => {
             >
               <CalendarDays
                 size={45}
-                className="mx-auto text-violet-700 mb-5"
+                className="mx-auto text-red-700 mb-5"
               />
               <h3 className="font-bold text-xl">Data</h3>
-              <p className="mt-2"> 05 de Setembro de 2026</p>
+              <p className="mt-2"> 17 de Outubro de 2026</p>
             </div>
             <div
               className="
 card-info
 "
             >
-              <Clock3 size={45} className="mx-auto text-violet-700 mb-5" />
+              <Clock3 size={45} className="mx-auto text-red-700 mb-5" />
               <h3 className="font-bold text-xl">Horas</h3>
-              <p className="mt-2"> 19:00</p>
+              <p className="mt-2"> 20:00</p>
             </div>
             <div
               className="
 card-info
 "
             >
-              <MapPin size={45} className="mx-auto text-violet-700 mb-5" />
+              <MapPin size={45} className="mx-auto text-red-700 mb-5" />
               <h3 className="font-bold text-xl">Local</h3>
-              <p className="mt-2"> Chacára da Família</p>
+              <p className="mt-2"> Mirante Eventos e Buffet</p>
             </div>
             <div
               className="
 card-info
 "
             >
-              <Navigation size={45} className="mx-auto text-violet-700 mb-5" />
+              <Navigation size={45} className="mx-auto text-red-700 mb-5" />
               <h3 className="font-bold text-xl">Como chegar</h3>
               <a
-                href="https://www.google.com/maps/dir/-15.8786403,-48.0765443/-15.972196,-48.239297/@-15.9765836,-48.2412687,184m/data=!3m1!1e3!4m16!4m15!1m11!3m4!1m2!1d-48.2413535!2d-15.9849611!3s0x935bd9fd06467f93:0x4673bf5cb7e02596!3m4!1m2!1d-48.2404838!2d-15.9741213!3s0x935bda0089e26341:0xfcad9f62f6f84829!4e1!1m1!4e1!3e0?entry=ttu&g_ep=EgoyMDI2MDcyNi4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/dir//Mirante+Eventos+e+Buffet,+s%2Fn+Col%C3%B4nia+Agr%C3%ADcola+Samambaia,+quadra+10+conjunto+16+-+Vicente+Pires,+Bras%C3%ADlia+-+DF,+72002-052/@-15.8712465,-48.0704318,2786m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x935a331ab08ce2b1:0x8cd0777243e00609!2m2!1d-48.0510987!2d-15.8111481?entry=ttu&g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-violet-700 hover:underline"
+                className="mt-2 inline-block text-red-700 hover:underline"
               >
                 Abrir no Google Maps
               </a>
@@ -175,7 +175,7 @@ card-info
 
       <section className="secao">
         <div className=" container">
-          <div className="bg-white rounded-3xl shadwon-lg p-8 text-zinc-700 font-medium ">
+          <div className="bg-white rounded-3xl shadwon-lg p-8 text-blue-950 font-medium ">
             <h2 className="text-center text-4xl mb-8 font-[--fonte-titulo]">
               Deixe sua mensagem
             </h2>

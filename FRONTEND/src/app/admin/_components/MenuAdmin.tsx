@@ -33,7 +33,7 @@ export default function MenuAdmin() {
     <>
       {/* Desktop */}
       <aside className="hidden lg:flex w-72 min-h-screen cor-navbar text-white flex-col">
-        <div className="p-8 border-b border-violet-500 flex flex-col">
+        <div className="p-8 border-b border-red-900 flex flex-col">
           <div className="flex items-center gap-3">
             <Sparkles size={30} />
             <h1 className="text-2xl font-bold">Yasmim</h1>
@@ -52,7 +52,7 @@ export default function MenuAdmin() {
                 key={item.rota}
                 to={item.rota}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 p-2 rounded-md ${isActive ? "bg-violet-500" : "hover:bg-violet-600"}`
+                  `flex items-center gap-3 p-2 rounded-md ${isActive ? "bg-red-900" : "hover:bg-red-950"}`
                 }
               >
                 <Icone size={22} />
@@ -65,7 +65,7 @@ export default function MenuAdmin() {
         <div className="mt-auto p-4">
           <NavLink
             to="/"
-            className="flex items-center gap-3 p-2 hover:bg-violet-600 rounded-md"
+            className="flex items-center gap-3 p-2 hover:bg-red-900 rounded-md"
           >
             <LogOut size={22} />
             <span>Sair</span>
@@ -76,7 +76,7 @@ export default function MenuAdmin() {
       {/* Mobile */}
       <div className="lg:hidden fixed top-20 right-0 z-40">
         <button
-          className="bg-violet-700 text-white p-3 m-2 rounded-lg"
+          className="bg-red-900 text-white p-3 m-2 rounded-lg"
           onClick={() => setMenuAberto(!menuAberto)}
         >
           {menuAberto ? <X size={24} /> : <Menu size={24} />}
@@ -94,7 +94,7 @@ export default function MenuAdmin() {
                   to={item.rota}
                   onClick={() => setMenuAberto(false)}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 p-3 rounded-md text-sm ${isActive ? "bg-violet-500" : "hover:bg-violet-600"}`
+                    `flex items-center gap-3 p-3 rounded-md text-sm ${isActive ? "bg-red-900" : "hover:bg-red-950"}`
                   }
                 >
                   <Icone size={20} />
@@ -104,11 +104,11 @@ export default function MenuAdmin() {
             })}
           </nav>
 
-          <div className="p-4 border-t border-violet-500">
+          <div className="p-4 border-t border-red-500">
             <NavLink
               to="/"
               onClick={() => setMenuAberto(false)}
-              className="flex items-center gap-3 p-3 hover:bg-violet-600 rounded-md text-sm"
+              className="flex items-center gap-3 p-3 hover:bg-red-900 rounded-md text-sm"
             >
               <LogOut size={20} />
               <span>Sair</span>

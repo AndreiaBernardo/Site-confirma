@@ -42,7 +42,7 @@ export default function LinhaFamilia({
             <Pencil size={20} />
           </button>
 <button
-              className="text-violet-700 hover:scale-110 transition"
+              className="text-red-700 hover:scale-110 transition"
               title="Visualizar"
               onClick={() => onVisualizar(familia)}
             >

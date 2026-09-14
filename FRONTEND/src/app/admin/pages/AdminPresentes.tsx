@@ -133,11 +133,11 @@ console.log("modalAberto:", modalAberto);
     <section className="space-y-6 sm:space-y-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
         <div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-700">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-950">
            Gerenciar Presentes
           </h1>
 
-          <p className="text-xs sm:text-sm lg:text-base text-zinc-500 mt-2">
+          <p className="text-xs sm:text-sm lg:text-base text-blue-950 mt-2">
             Cadastre, edite e acompanhe os presentes.
           </p>
         </div>
@@ -155,7 +155,7 @@ console.log("modalAberto:", modalAberto);
 
         <Search
           size={20}
-          className="absolute  top-1/2 -translate-y-1/2 text-zinc-400  "
+          className="absolute  top-1/2 -translate-y-1/2 text-blue-400  "
         />
 
         <input
@@ -167,7 +167,7 @@ console.log("modalAberto:", modalAberto);
 
       </div>
 
-       <div className="bg-white rounded-3xl shadow-lg p-10 text-center text-zinc-500">
+       <div className="bg-white rounded-3xl shadow-lg p-10 text-center text-blue-950">
 
         Aqui ficará a tabela de presentes.
 

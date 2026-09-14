@@ -7,17 +7,17 @@
 
 
   /* Cores */
-  --cor-roxo-principal: #5B21B6;
-  --cor-roxo-secundario: #6D28D9;
-  --cor-lilas: #C4B5FD;
-  --cor-lilas-claro: #F5F3FF;
+  --cor-azul-principal: #7a1515;
+  --cor-azul-secundario: #010b63;
+  --cor-vermelho: #010b63 ;
+  --cor-vermelho-claro: #b8bff5;
   --cor-prata: #D1D5DB;
 
   /* Textos */
-  --cor-texto: #374151;
+  --cor-texto: #042157da;
   --cor-branco: #FFFFFF;
 
-  --cor-rodape:#4C1D95;
+  --cor-rodape:#030572;
 }
 
 .container{
@@ -39,11 +39,11 @@ body,
 }
 
 .cor-fundo{
-    background-color: var(--cor-lilas-claro);
+    background-color: var(--cor-vermelho-claro);
 }
 
 .cor-navbar{
-    background-color: var(--cor-roxo-principal)
+    background-color: var(--cor-azul-principal)
 }
 
 .cor-rodape{
@@ -60,7 +60,7 @@ body,
 
 .titulo-principal{
     font-family: var(--fonte-titulo);
-    color: var(--cor-roxo-principal);
+    color: var(--cor-azul-principal);
 
     font-size: 5rem;
     font-weight: 700;
@@ -71,7 +71,7 @@ body,
 }
 
 .botao-confirma{
-    background-color: var(--cor-roxo-principal);
+    background-color: var(--cor-azul-principal);
     color: var(--cor-branco);
     display: inline-block;
     padding-inline: 3rem;
@@ -95,7 +95,7 @@ body,
     border-radius: .5rem;
 }
 .botao-entrar{
-    background-color: var(--cor-roxo-principal);
+    background-color: var(--cor-azul-principal);
     color: var(--cor-branco);
     border-radius: .5rem;
     font-weight: 600;

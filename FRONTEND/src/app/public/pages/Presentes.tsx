@@ -77,8 +77,9 @@ async function confirmarReserva(nome: string) {
         <br />
 
         <p className="mt-4 sm:mt-6 texto-padrao cor-texto text-sm sm:text-base lg:text-lg px-2">🛵OBS: Segue o endereço para entrega dos presentes(caso quiser enviar):
-          <br />Endereço para entrega: QR 306 conjunto 15 casa 07
-          <br />CEP: 72306-315 Samambaia Sul
+          <br />Endereço para entrega: QR 108 conjunto 7A lote 01 apt 1103
+          <br />Residencial Açores
+          <br />CEP: 72302-200 Samambaia Sul
         </p>
       </div>
       <div

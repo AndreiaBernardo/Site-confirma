@@ -189,7 +189,7 @@ onSalvar(familiaSalva);
                 onChange={(e) => alterarNomeFamilia(e.target.value)}
             />
             {erroNome && (
-                <p className="text-red-500 text-sm mt-1">{erroNome}</p>
+                <p className="text-red-900 text-sm mt-1">{erroNome}</p>
             )}
 
           </div>
@@ -205,7 +205,7 @@ onSalvar(familiaSalva);
               onChange={(e) => alterarSenha(e.target.value)}
             />
            {erroSenha && (
-                <p className="text-red-500 text-sm mt-1">{erroSenha}</p>
+                <p className="text-red-900 text-sm mt-1">{erroSenha}</p>
             )}
 
 
@@ -223,7 +223,7 @@ onSalvar(familiaSalva);
               onChange={(e) => alterarQuantidade(Number(e.target.value))}
             />
             {erroConvidados && (
-                <p className="text-red-500 text-sm mt-1">{erroConvidados}</p>
+                <p className="text-red-900 text-sm mt-1">{erroConvidados}</p>
             )}
 
           </div>

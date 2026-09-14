@@ -31,7 +31,7 @@ export default function TabelaPresentes({
 
       <table className="w-full min-w-[900px]">
 
-        <thead className="bg-violet-700 text-white">
+        <thead className="bg-red-900 text-white">
 
           <tr>
 

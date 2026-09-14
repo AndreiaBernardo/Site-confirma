@@ -41,7 +41,7 @@ export default function ModalExcluirPresente({
 
           <button
             onClick={onConfirmar}
-            className="px-6 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700"
+            className="px-6 py-2 bg-red-900 text-white rounded-xl hover:bg-red-950"
           >
             Excluir
           </button>

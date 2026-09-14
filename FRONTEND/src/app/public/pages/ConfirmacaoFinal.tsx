@@ -11,9 +11,9 @@ export default function ConfirmacaoFinal() {
     <section className="w-full min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-4 sm:p-6 lg:p-8 text-center w-full max-w-2xl">
         {vaiParticipar ? (
-          <Heart className="mx-auto text-violet-700 mb-4 sm:mb-6 lg:mb-8 size-16 sm:size-20 lg:size-28" />
+          <Heart className="mx-auto text-red-700 mb-4 sm:mb-6 lg:mb-8 size-16 sm:size-20 lg:size-28" />
         ) : (
-          <CircleCheckBig className="mx-auto text-violet-700 mb-4 sm:mb-6 lg:mb-8 size-16 sm:size-20 lg:size-28" />
+          <CircleCheckBig className="mx-auto text-red-700 mb-4 sm:mb-6 lg:mb-8 size-16 sm:size-20 lg:size-28" />
         )}
         <h1 className="titulo-principal text-xl sm:text-2xl lg:text-3xl font-bold break-words">
           {vaiParticipar ? "Confirmação registrada!" : "Resposta registrada!"}
@@ -27,7 +27,7 @@ export default function ConfirmacaoFinal() {
             Estamos muito felizes em compartilhar esse momento tão especial com
             vocês. <br />
             <br />
-            Sua presença tornará esse dia ainda mais inesquecível.💜
+            Sua presença tornará esse dia ainda mais inesquecível.💖
           </p>
         ) : (
           <p className="texto-padrao text-xs sm:text-sm lg:text-base mt-4 sm:mt-6 lg:mt-8 leading-relaxed cor-texto">

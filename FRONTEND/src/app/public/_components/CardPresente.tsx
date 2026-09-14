@@ -51,7 +51,7 @@ export default function CardPresente({
                    Este presente já foi reservado.
                 </button>
                ) :(
-                <a href={link} target="_blank" className="font-bold text-xs sm:text-sm lg:text-base text-violet-700 hover:text-violet-900 transition-colors mb-1.5 text-center"> 
+                <a href={link} target="_blank" className="font-bold text-xs sm:text-sm lg:text-base text-red-900 hover:text-red-950 transition-colors mb-1.5 text-center"> 
                     Ver na loja
                 </a>
                )}
@@ -61,8 +61,8 @@ export default function CardPresente({
                 disabled={reservado}
                 className={`mt-auto py-2 sm:py-3 rounded-lg lg:rounded-xl font-medium text-sm sm:text-base transition-colors ${
                     reservado
-                        ? "w-full bg-gray-500 text-white"
-                        : "w-full bg-violet-700 text-white hover:bg-violet-800"
+                        ? "w-full bg-blue-950 text-white"
+                        : "w-full bg-red-700 text-white hover:bg-red-800"
                 }`}
                 >
                   {reservado

@@ -168,7 +168,7 @@ export default function ModalPresente({
 
           <button
   type="button"
-  className="bg-violet-700 text-white px-6 py-3 rounded-xl"
+  className="bg-red-900 text-white px-6 py-3 rounded-xl"
   onClick={() => {
     
     salvar();

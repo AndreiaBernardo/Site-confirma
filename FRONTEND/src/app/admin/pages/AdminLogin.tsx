@@ -108,7 +108,7 @@ navigate("/admin/dashboard");
         />
 
         {erro && (
-          <p className="text-red-600 text-sm font-medium">
+          <p className="text-red-900 text-sm font-medium">
             {erro}
           </p>
         )}
@@ -123,7 +123,7 @@ navigate("/admin/dashboard");
 
         <Link
   to="/admin/esqueci-senha"
-  className="text-center text-sm text-violet-700 hover:underline"
+  className="text-center text-sm text-red-900 hover:underline"
 >
   Esqueceu sua senha?
 </Link>

@@ -37,7 +37,7 @@ if (familias.length === 0) {
 
       <table className="w-full min-w-[850px]">
 
-        <thead className="bg-violet-700 text-white">
+        <thead className="bg-red-900 text-white">
 
           <tr>
 

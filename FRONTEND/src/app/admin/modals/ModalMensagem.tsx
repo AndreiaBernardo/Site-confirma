@@ -22,7 +22,7 @@ export default function ModalMensagem({
 
         <div className="flex justify-between items-center mb-8">
 
-          <h2 className="text-3xl font-bold text-zinc-700">
+          <h2 className="text-3xl font-bold text-blue-950">
             Mensagem do Convidado
           </h2>
 
@@ -36,7 +36,7 @@ export default function ModalMensagem({
 
           <div>
 
-            <h3 className="text-sm text-zinc-500">
+            <h3 className="text-sm text-blue-950">
               Nome
             </h3>
 
@@ -48,7 +48,7 @@ export default function ModalMensagem({
 
           <div>
 
-            <h3 className="text-sm text-zinc-500">
+            <h3 className="text-sm text-blue-950">
               Data
             </h3>
 
@@ -60,11 +60,11 @@ export default function ModalMensagem({
 
           <div>
 
-            <h3 className="text-sm text-zinc-500 mb-2">
+            <h3 className="text-sm text-blue-950 mb-2">
               Mensagem
             </h3>
 
-            <div className="bg-zinc-100 rounded-2xl p-5 leading-7">
+            <div className="bg-blue-100 rounded-2xl p-5 leading-7">
 
               {mensagem?.texto}
 

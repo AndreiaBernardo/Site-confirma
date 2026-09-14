@@ -155,7 +155,7 @@ export default function AdminCadastro() {
 
         {erro && (
 
-          <p className="text-red-600">
+          <p className="text-red-900">
 
             {erro}
 

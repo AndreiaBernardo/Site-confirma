@@ -20,7 +20,7 @@ export default function ModalExcluirFamilia({
 
       <div className="bg-white rounded-3xl shadow-xl w-full max-w-md p-8">
 
-        <h2 className="text-2xl font-bold text-center text-red-600">
+        <h2 className="text-2xl font-bold text-center text-red-900">
           Excluir Família
         </h2>
 
@@ -47,7 +47,7 @@ export default function ModalExcluirFamilia({
 
           <button
             onClick={onConfirmar}
-            className="px-6 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 transition"
+            className="px-6 py-2 rounded-xl bg-red-900 text-white hover:bg-red-950 transition"
           >
             Excluir
           </button>

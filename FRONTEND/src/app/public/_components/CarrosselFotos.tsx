@@ -75,14 +75,14 @@ useEffect(() => {
           <div className="absolute inset-0 flex items-center justify-center">
             <button
               onClick={imagemAnterior}
-              className="absolute left-2 sm:left-4 lg:-left-8 top-1/2 translate-y-1/2 bg-white/80 text-violet-700 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 shadow-lg backdrop-blur-sm flex items-center justify-center opacity-0 hover:bg-violet-700 hover:text-white transition-opacity duration-300 group-hover:opacity-100"
+              className="absolute left-2 sm:left-4 lg:-left-8 top-1/2 translate-y-1/2 bg-white/80 text-red-700 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 shadow-lg backdrop-blur-sm flex items-center justify-center opacity-0 hover:bg-red-700 hover:text-white transition-opacity duration-300 group-hover:opacity-100"
             >
               <ChevronLeft size={20} className="sm:size-6 lg:size-9" />
             </button>
 
             <button
               onClick={proximaImagem}
-              className="absolute right-2 sm:right-4 lg:-right-8 top-1/2 translate-y-1/2 bg-white/80 text-violet-700 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 shadow-lg backdrop-blur-sm flex items-center justify-center opacity-0 hover:bg-violet-700 hover:text-white transition-opacity duration-300 group-hover:opacity-100"
+              className="absolute right-2 sm:right-4 lg:-right-8 top-1/2 translate-y-1/2 bg-white/80 text-red-700 rounded-full w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 shadow-lg backdrop-blur-sm flex items-center justify-center opacity-0 hover:bg-red-700 hover:text-white transition-opacity duration-300 group-hover:opacity-100"
             >
               <ChevronRight size={20} className="sm:size-6 lg:size-9" />
             </button>
@@ -97,8 +97,8 @@ useEffect(() => {
             onClick={() => setImagemAtual(indice)}
             className={`rounded-full transition-all ${
               indice === imagemAtual
-                ? "w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-violet-700"
-                : "w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-gray-300 hover:bg-gray-400"
+                ? "w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-red-700"
+                : "w-2 h-2 sm:w-3 sm:h-3 lg:w-4 lg:h-4 bg-blue-950 hover:bg-blue-900"
             }`}
           />
         ))}

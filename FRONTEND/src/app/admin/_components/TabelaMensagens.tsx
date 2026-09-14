@@ -27,7 +27,7 @@ export default function TabelaMensagens({
       </p>
       <div className="bg-white rounded-3xl shadow-lg overflow-x-auto">
         <table className="w-full min-w-[900px]">
-          <thead className="bg-violet-700 text-white">
+          <thead className="bg-red-900 text-white">
             <tr>
               <th className="text-left p-5">Nome</th>
 

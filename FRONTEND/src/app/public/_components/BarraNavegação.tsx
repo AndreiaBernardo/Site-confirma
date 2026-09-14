@@ -17,7 +17,7 @@ export const BarraNavegacao = () => {
 
      
       <div className="md:hidden flex items-center justify-between h-16 px-4">
-        <div className="font-bold text-lg">Yasmim</div>
+        <div className="font-bold text-lg">Gabriela</div>
         <button onClick={() => setMenuAberto(!menuAberto)} className="p-2">
           {menuAberto ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -29,28 +29,28 @@ export const BarraNavegacao = () => {
           <NavLink
             to="/"
             onClick={() => setMenuAberto(false)}
-            className="py-2 text-sm hover:text-violet-600"
+            className="py-2 text-sm hover:text-blue-900"
           >
             Início
           </NavLink>
           <NavLink
             to="/login-familia"
             onClick={() => setMenuAberto(false)}
-            className="py-2 text-sm hover:text-violet-600"
+            className="py-2 text-sm hover:text-blue-900"
           >
             Confirmar Presença
           </NavLink>
           <NavLink
             to="/presentes"
             onClick={() => setMenuAberto(false)}
-            className="py-2 text-sm hover:text-violet-600"
+            className="py-2 text-sm hover:text-blue-950"
           >
             Lista de Presentes
           </NavLink>
           <NavLink
             to="/admin"
             onClick={() => setMenuAberto(false)}
-            className="py-2 text-sm hover:text-violet-600"
+            className="py-2 text-sm hover:text-blue-950"
           >
             Administração
           </NavLink>

@@ -90,17 +90,17 @@ async function confirmarExclusao() {
     <section className="space-y-6 sm:space-y-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
         <div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-700">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-950">
             Gerenciar Mensagens
           </h1>
-          <p className="text-xs sm:text-sm lg:text-base text-zinc-500 mt-2">
+          <p className="text-xs sm:text-sm lg:text-base text-blue-950 mt-2">
             Visualizar, editar e excluir mensagens.
           </p>
         </div>
         <div className="relative max-w-md">
                 <Search
                   size={20}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400"
                 />
         
                 <input

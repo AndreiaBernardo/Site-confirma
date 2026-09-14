@@ -47,7 +47,7 @@ export default function ContadorRegressivo() {
 function CardTempo({ valor, titulo }: { valor: number; titulo: string }) {
   return (
     <div>
-      <div className="card-info text-violet-700 mb-5 shadow-lg rounded-3xl p-6 flex flex-col items-center justify-center">
+      <div className="card-info text-red-700 mb-5 shadow-lg rounded-3xl p-6 flex flex-col items-center justify-center">
         <h3 className="text-6xl font-bold">{valor}</h3>
         <p className="text-3xl mt-2">{titulo}</p>
       </div>
