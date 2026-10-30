@@ -38,7 +38,7 @@ setMensagemSucesso("");
     });
 
     setMensagemSucesso(
-  "💖 Sua mensagem foi enviada com sucesso! Obrigado pelo carinho com a Gabriela."
+  "💖 Sua mensagem foi enviada com sucesso! Obrigado pelo carinho com o casal."
 );
 
 setNome("");
@@ -73,10 +73,10 @@ setTimeout(() => {
     <>
       <section className="text-center py-12">
         <h1 className="titulo-principal tracking-[0.6rem] text-9xl font-bold">
-          Gabriela
+          Maria e João
         </h1>
         <h2 className="text-7xl tracking-[0.4rem] text-blue-950 font-semibold mt-25 font-[--fonte-titulo] ">
-          15 anos
+          Casamento
         </h2>
       </section>
 
@@ -92,14 +92,14 @@ setTimeout(() => {
             </h2>
 
             <p className="text-xl text-center  ">
-              " Estou muito feliz em compartilhar este momento tão especial da
-              minha vida com vocês. A presença de cada um tornará esta noite
-              ainda mais inesquecível. Espero celebrar esse sonho ao lado de
-              pessoas tão importantes para mim.!!"
+              " Estamos muito felizes em compartilharmos este momento tão especial da
+              nossas vidas com vocês. A presença de cada um tornará esta noite
+              ainda mais inesquecível. Esperamos celebrarmos esse sonho ao lado de
+              pessoas tão importantes para nós.!!"
             </p>
             <br />
             <p className="text-2xl text-end  ">
-              <b>Gabriela💖</b>
+              <b>Maria e João💖</b>
             </p>
           </div>
         </div>
@@ -133,7 +133,7 @@ setTimeout(() => {
                 className="mx-auto text-red-700 mb-5"
               />
               <h3 className="font-bold text-xl">Data</h3>
-              <p className="mt-2"> 17 de Outubro de 2026</p>
+              <p className="mt-2"> 17 de Outubro de 2030</p>
             </div>
             <div
               className="
